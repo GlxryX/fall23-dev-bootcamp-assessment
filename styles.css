@@ -1,3 +1,119 @@
 /* Your Styles Here */
-body{
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom left, #3498db, #e74c3c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    animation: bgGradient 30s linear infinite;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: cardScale 0.5s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.profile-pic-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    animation: picContainerScale 0.5s ease-in-out;
+}
+
+.profile-pic {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.contact a:hover {
+    background-color: #2980b9;
+}
+
+@keyframes bgGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes cardScale {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes picContainerScale {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
